@@ -4,20 +4,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Register from './pages/Register';
+import { BrowserRouter,Routes,Route } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-       <Navbar bg="primary" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-    </div>
+   <>
+<BrowserRouter>
+<Nav/>
+<Routes>
+{/* <Route path="/logout" element={<Logout/>}/> */}
+  {/* <Route path="/" element={<Home/>}/> */}
+  {/* <Route path="/service" element={<Service/>}/>
+  <Route path="/about" element={<About/>}/>
+  <Route path="/gallery" element={<Gallery/>}/>
+  <Route path="/contact" element={<Contact/>}/>
+  <Route path="/login" element={<Login/>}/> */}
+  <Route path="/register" element={<Register/>}/>
+  {/* <Route path="/admin" element={<Adminlayout/>}>
+  <Route path="users" element={<AdminUsers />} />
+  <Route path="contacts" element={<AdminContacts />} />
+</Route> */}
+
+</Routes>
+</BrowserRouter>
+   </>
   );
 }
 
