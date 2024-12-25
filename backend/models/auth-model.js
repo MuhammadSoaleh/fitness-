@@ -19,8 +19,8 @@ phone:{
     require:true 
 },
 image:{
-    type:Number,
-    require:true 
+    type:String,
+     
 },
 height:{
     type:Number,
@@ -31,5 +31,5 @@ weight:{
     require:true 
 },
 })
-const User = mongoose.model("User", userSchema);
-exports.model=User
+const User= mongoose.model("User", userSchema);
+module.exports=User;
