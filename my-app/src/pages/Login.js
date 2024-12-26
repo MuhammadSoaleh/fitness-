@@ -5,7 +5,7 @@ function Login() {
     <div
       style={{
         backgroundImage:
-          `url(${bg})`,
+          `url('https://www.wellandgood.com/wp-content/uploads/2021/10/GettyImages-1216432464.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         width: '100%',
