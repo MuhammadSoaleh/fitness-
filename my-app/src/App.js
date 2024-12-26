@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
+import Nav from '../src/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Register from './pages/Register';
 import { BrowserRouter,Routes,Route } from "react-router-dom";
@@ -28,6 +28,7 @@ function App() {
 
 </Routes>
 </BrowserRouter>
+
    </>
   );
 }
