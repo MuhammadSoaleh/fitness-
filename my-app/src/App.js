@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Register from './pages/Register';
 import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Login from './pages/Login';
 function App() {
   return (
    <>
@@ -14,16 +15,16 @@ function App() {
 <Routes>
 {/* <Route path="/logout" element={<Logout/>}/> */}
   {/* <Route path="/" element={<Home/>}/> */}
-  {/* <Route path="/service" element={<Service/>}/>
+   {/* <Route path="/service" element={<Service/>}/>
   <Route path="/about" element={<About/>}/>
   <Route path="/gallery" element={<Gallery/>}/>
-  <Route path="/contact" element={<Contact/>}/>
-  <Route path="/login" element={<Login/>}/> */}
+  <Route path="/contact" element={<Contact/>}/> */}
+   <Route path="/login" element={<Login/>}/>
   <Route path="/register" element={<Register/>}/>
-  {/* <Route path="/admin" element={<Adminlayout/>}>
+   {/* <Route path="/admin" element={<Adminlayout/>}>
   <Route path="users" element={<AdminUsers />} />
   <Route path="contacts" element={<AdminContacts />} />
-</Route> */}
+</Route>  */}
 
 </Routes>
 </BrowserRouter>

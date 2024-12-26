@@ -7,8 +7,8 @@ function Register() {
     < div   style={{
         backgroundImage: `url('${im}')`,
         
-        backgroundSize: 'cover', // makes the image cover the entire element
-        backgroundPosition: 'center', // centers the image within the element
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center', 
         width: '100%',
         height: '100vh',
       }}>
@@ -16,6 +16,7 @@ function Register() {
   Sign Up
 </h1>
     <div className='container-fluid col-3 mt-5'  >
+      <form method='post' encType='multi-part/form-data'>
       <div className="form-floating mb-3">
   <input type="text" class="form-control" id="floatingInput" placeHolder="username"/>
   <label htmlFor="floatingInput">User Name</label>
@@ -29,14 +30,23 @@ function Register() {
   <label htmlFor="floatingPassword">Password</label>
 </div>
 <div className="form-floating mb-3">
-  <input type="phone" class="form-control" id="floatingPassword" placeholder="Phone"/>
+  <input type="number" class="form-control" id="floatingPassword" placeholder="Phone"/>
   <label for="floatingPassword">Phone</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="number" class="form-control" id="floatingInput" placeholder="Weight"/>
+  <label for="floatingInput">Weight</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="number" class="form-control" id="floatingInput" placeholder="Height"/>
+  <label for="floatingInput">Height</label>
 </div>
 <div className="input-group mb-3">
   <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload"/>
 
 </div>
-<input type='button' className='btn  btn-dark mb-5' style={{color:'silver'}} value='Sign Up'/>
+<input type='button' className='btn  btn-dark mb-5 w-100' style={{color:'silver'}} value='Sign Up'/>
+</form>
     </div>
     </div>
   )
