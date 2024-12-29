@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const jwt=require("jsonwebtoken")
 const userSchema = new mongoose.Schema({
 
 username:{
@@ -30,6 +30,24 @@ weight:{
     type:Number,
     require:true 
 },
-})
+});
+userSchema.methods.generatrToken= async function(){
+    try {
+        return jwt.sign({
+            userId:this._id.toString(),
+            username:this.username,
+            email:this.email,
+            password:this.password,
+            phone:this.phone,
+            image:this.image.toString(),
+            height:this.height,
+            weight:this.weight,
+        },"aptechnorthkarachi",{
+            expiresIn:"30h"
+        })
+    } catch (error) {
+        console.log(error);
+    }
+}
 const User= mongoose.model("User", userSchema);
 module.exports=User;
