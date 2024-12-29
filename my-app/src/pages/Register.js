@@ -45,7 +45,7 @@ function Register() {
   <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload"/>
 
 </div>
-<input type='button' className='btn  btn-dark mb-5 w-100' style={{color:'silver'}} value='Sign Up'/>
+<input type='button' className='btn  btn-dark mb-5 w-100' style={{background:'linear-gradient(to right, #737373, #c0c0c0)'}} value='Sign Up'/>
 </form>
     </div>
     </div>
