@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Register from './pages/Register';
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Login from './pages/Login';
+import Contact from './pages/Contact';
 function App() {
   return (
    <>
@@ -17,8 +18,8 @@ function App() {
   {/* <Route path="/" element={<Home/>}/> */}
    {/* <Route path="/service" element={<Service/>}/>
   <Route path="/about" element={<About/>}/>
-  <Route path="/gallery" element={<Gallery/>}/>
-  <Route path="/contact" element={<Contact/>}/> */}
+  <Route path="/gallery" element={<Gallery/>}/>*/}
+  <Route path="/contact" element={<Contact/>}/> 
    <Route path="/login" element={<Login/>}/>
   <Route path="/register" element={<Register/>}/>
    {/* <Route path="/admin" element={<Adminlayout/>}>
