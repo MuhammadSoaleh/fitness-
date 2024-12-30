@@ -25,7 +25,7 @@ function Contact() {
 <input type='button' className='btn my-3 rounded-pill btn-dark mb-5 w-100' style={{background:'linear-gradient(to right, #cccccc, #4d4d4d)'}} value='Sign Up'/>
 </form>
       </div>
-      <div className='container-fluid bg-dark'>
+      <div className='container-fluid bg-dark' style={{height:'30vh'}}>
       <div class="container text-center">
   <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
     <div class="col">
