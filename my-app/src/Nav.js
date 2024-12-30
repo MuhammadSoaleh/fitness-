@@ -12,13 +12,16 @@ function Nav() {
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li className="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="/login">SignIn</a>
         </li>
         <li className="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="/register">SignUp</a>
+        </li>
+        <li className="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
         </li>
         <li className="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

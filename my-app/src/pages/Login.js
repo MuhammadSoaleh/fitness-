@@ -51,7 +51,7 @@ function Login() {
               />
               <label htmlFor="floatingPassword">Password</label>
             </div>
-            <button type="submit" style={{background:'linear-gradient(to right, #737373, #c0c0c0)'}} className="btn btn-dark w-100 mt-4">
+            <button type="submit" style={{background:'linear-gradient(to right, #737373, #c0c0c0)'}} className="btn rounded-pill btn-dark w-100 mt-4">
               Sign In
             </button>
           </form>
