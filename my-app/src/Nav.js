@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAuth } from './user/Auth';
-
+import  {useAuth}  from './user/Auth';
+import logo from "../src/pages/images/WhatsApp_Image_2025-01-07_at_9.09.26_PM-removebg-preview.png";
 function Nav() {
   const { isLoggedIn } = useAuth();
   
@@ -8,7 +8,7 @@ function Nav() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/"> <img src=''></img> Fitness</a>
+          <a className="navbar-brand" href="/"> <img src={logo} style={{width:'50px',height:'70px'}}></img> Fitness</a>
           <button 
             className="navbar-toggler" 
             type="button" 
