@@ -7,10 +7,10 @@ function Workout() {
         height: 300,
       };
   return (
-    <div className='container-fluid'>
-      <h1 style={{fontFamily:'revert-layer'}}> Workout</h1>
+    <div className='container-fluid  bg-dark'>
+      <h1 style={{fontFamily:'revert-layer',color:'yellow'}} className='text-center'> Workout</h1>
       <div class="grid text-center">
-  <div class="g-col-6">
+  <div class="g-col-6 bg-body-tertiary">
 
 
 
@@ -18,7 +18,7 @@ function Workout() {
 
 
 </div>
-  <div class="g-col-6">
+  <div class="g-col-6 bg-body-tertiary">
   <div class="card" style={{width:" 18rem;"}}>
   <img src="..." class="card-img-top" alt="..."/>
   <div className="card-body">
