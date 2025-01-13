@@ -64,20 +64,20 @@ function Register() {
       </h1>
       <div className="container-fluid col-3 mt-5">
         
-        <form onSubmit={handleSubmit}>
-          <div className="form-floating mb-3">
+         <form onSubmit={handleSubmit} className='row g-3'>
+          <div className="form-floating mb-3 col-md-6">
             <input
               type="text"
               value={user.username}
               onChange={handleInput}
               name="username"
-              className="form-control"
+              className="form-control col-md-6"
               id="floatingUsername"
               placeholder="Username"
             />
             <label htmlFor="floatingUsername">Username</label>
           </div>
-          <div className="form-floating mb-3">
+          <div className="form-floating mb-3 col-md-6">
             <input
               type="email"
               value={user.email}
@@ -89,7 +89,7 @@ function Register() {
             />
             <label htmlFor="floatingemail">Email Address</label>
           </div>
-          <div className="form-floating mb-3">
+          <div className="form-floating mb-3 col-md-6" >
             <input
               type="password"
               value={user.password}
@@ -101,7 +101,7 @@ function Register() {
             />
             <label htmlFor="floatingPassword">Password</label>
           </div>
-          <div className="form-floating mb-3">
+          {/* <div className="form-floating mb-3 col-md-6">
             <input
               type="number"
               value={user.phone}
@@ -112,8 +112,8 @@ function Register() {
               placeholder="Phone"
             />
             <label htmlFor="floatingPhone">Phone</label>
-          </div>
-          <div className="form-floating mb-3">
+          </div> */}
+          <div className="form-floating mb-3 col-md-6">
             <input
               type="number"
               value={user.weight}
@@ -125,7 +125,7 @@ function Register() {
             />
             <label htmlFor="floatingWeight">Weight</label>
           </div>
-          <div className="form-floating mb-3">
+          <div className="form-floating mb-3 col-md-6">
             <input
               type="number"
               value={user.height}
@@ -137,7 +137,7 @@ function Register() {
             />
             <label htmlFor="floatingHeight">Height</label>
           </div>
-          <div className="form-floating mb-3">
+          <div className="form-floating mb-3 col-md-6">
             <input
               type="number"
               value={user.age}
@@ -157,7 +157,58 @@ function Register() {
           >
             Sign Up
           </button>
-        </form>
+        </form> 
+
+{/* <form className="row g-3">
+  <div className="col-md-6">
+    <label for="inputEmail4" className="form-label">Email</label>
+    <input  type="text"
+              value={user.username}
+              onChange={handleInput}
+              name="username"
+              className="form-control"
+            
+              placeholder="Username" class="form-control" id="inputEmail4"/>
+  </div>
+  <div className="col-md-6">
+    <label for="inputPassword4" className="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword4"/>
+  </div>
+  <div className="col-md-6">
+    <label for="inputAddress" className="form-label">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeHolder="1234 Main St"/>
+  </div>
+  <div className="col-md-6">
+    <label for="inputAddress2" className="form-label">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeHolder="Apartment, studio, or floor"/>
+  </div>
+  <div className="col-md-6">
+    <label for="inputCity" className="form-label">City</label>
+    <input type="text" class="form-control" id="inputCity"/>
+  </div>
+  <div className="col-md-4">
+    <label for="inputState" className="form-label">State</label>
+    <select id="inputState" className="form-select">
+      <option selected>Choose...</option>
+      <option>...</option>
+    </select>
+  </div>
+  <div className="col-md-2">
+    <label for="inputZip" className="form-label">Zip</label>
+    <input type="text" class="form-control" id="inputZip"/>
+  </div>
+  <div className="col-12">
+    <div className="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck"/>
+      <label class="htmlForm-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+  <div className="col-12">
+    <button type="submit" className="btn btn-primary">Sign in</button>
+  </div>
+</form> */}
       </div>
     </div>
   );
