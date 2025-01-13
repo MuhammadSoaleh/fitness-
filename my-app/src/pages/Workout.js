@@ -8,7 +8,7 @@ function Workout() {
       };
   return (
     <div className='container-fluid  bg-dark'>
-      <h1 style={{fontFamily:'revert-layer',color:'yellow'}} className='text-center'> Workout</h1>
+      <h1 style={{fontFamily:'revert-layer',color:'silver'}} className='text-center'> Workout</h1>
       <div class="grid text-center">
   <div class="g-col-6 bg-body-tertiary">
 
