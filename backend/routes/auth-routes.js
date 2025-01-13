@@ -5,6 +5,7 @@ const router = express.Router();
 
 
 router.get("/",control.home)
+router.post("/",control.home)
 router.post("/register",control.register);
 router.post("/login",control.login);
 
