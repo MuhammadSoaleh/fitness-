@@ -55,7 +55,7 @@ function Register() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         width: '100%',
-        height: '100vh',
+        height: '44rem',
         overflow: 'hidden',
       }}
     >
@@ -101,18 +101,7 @@ function Register() {
             />
             <label htmlFor="floatingPassword">Password</label>
           </div>
-          {/* <div className="form-floating mb-3 col-md-6">
-            <input
-              type="number"
-              value={user.phone}
-              onChange={handleInput}
-              name="phone"
-              className="form-control"
-              id="floatingPhone"
-              placeholder="Phone"
-            />
-            <label htmlFor="floatingPhone">Phone</label>
-          </div> */}
+        
           <div className="form-floating mb-3 col-md-6">
             <input
               type="number"
@@ -159,56 +148,7 @@ function Register() {
           </button>
         </form> 
 
-{/* <form className="row g-3">
-  <div className="col-md-6">
-    <label for="inputEmail4" className="form-label">Email</label>
-    <input  type="text"
-              value={user.username}
-              onChange={handleInput}
-              name="username"
-              className="form-control"
-            
-              placeholder="Username" class="form-control" id="inputEmail4"/>
-  </div>
-  <div className="col-md-6">
-    <label for="inputPassword4" className="form-label">Password</label>
-    <input type="password" class="form-control" id="inputPassword4"/>
-  </div>
-  <div className="col-md-6">
-    <label for="inputAddress" className="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeHolder="1234 Main St"/>
-  </div>
-  <div className="col-md-6">
-    <label for="inputAddress2" className="form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeHolder="Apartment, studio, or floor"/>
-  </div>
-  <div className="col-md-6">
-    <label for="inputCity" className="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity"/>
-  </div>
-  <div className="col-md-4">
-    <label for="inputState" className="form-label">State</label>
-    <select id="inputState" className="form-select">
-      <option selected>Choose...</option>
-      <option>...</option>
-    </select>
-  </div>
-  <div className="col-md-2">
-    <label for="inputZip" className="form-label">Zip</label>
-    <input type="text" class="form-control" id="inputZip"/>
-  </div>
-  <div className="col-12">
-    <div className="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck"/>
-      <label class="htmlForm-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-  <div className="col-12">
-    <button type="submit" className="btn btn-primary">Sign in</button>
-  </div>
-</form> */}
+
       </div>
     </div>
   );

@@ -14,10 +14,7 @@ password:{
     type:String,
     require:true 
 },
-phone:{
-    type:Number,
-    require:true 
-},
+
 age:{
     type:Number,
     require:true 
@@ -39,7 +36,7 @@ userSchema.methods.generateToken= async function(){
             username:this.username,
             email:this.email,
             password:this.password,
-            phone:this.phone,
+            
             age:this.age,
             height:this.height,
             weight:this.weight,

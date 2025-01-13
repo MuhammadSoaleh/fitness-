@@ -10,13 +10,13 @@ const home = async (req,res) => {
 };
 const register = async (req,res) => {
     try {
-        const {username,email,phone,password,age,height,weight} = req.body;
+        const {username,email,password,age,height,weight} = req.body;
         const userExist= await User.findOne({email});
         if (userExist) {
             return res.status(200).json({msg:"Email Already exist"});
         } 
         const hash_password = await bcrypt.hash(password, 12);
-            const userCreated= await User.create({username,email,phone,password:hash_password,age,height,weight});
+            const userCreated= await User.create({username,email,password:hash_password,age,height,weight});
         res.status(201).json({msg:userCreated});
         token:await userCreated.generateToken()
     } catch (error) {

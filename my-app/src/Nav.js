@@ -6,9 +6,9 @@ function Nav() {
   
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body sticky-top">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/"> <img src={logo} style={{width:'50px',height:'50px'}}></img> Fitness</a>
+          <a className="navbar-brand" href="/"> <img src={logo} style={{width:'50px',height:'40px'}}></img> Fitness</a>
           <button 
             className="navbar-toggler" 
             type="button" 
