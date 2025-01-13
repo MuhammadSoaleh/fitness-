@@ -74,7 +74,7 @@ const Authorizationtoken = `Bearer${token}`
    // Dependency on token, re-run if token changes
 
   return (
-    <AuthContext.Provider value={{ storeTokenInLS, LogoutUser, isLoggedIn, user,  services, Authorizationtoken }}>
+    <AuthContext.Provider value={{ storeTokenInLS, LogoutUser, isLoggedIn, user,  services, Authorizationtoken,userAuthentication }}>
       {children}
     </AuthContext.Provider>
   );

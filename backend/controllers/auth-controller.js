@@ -1,5 +1,6 @@
 
-const User = require("../models/auth-model"); 
+const User = require("../models/auth-model");
+const Nutrition = require("../models/nutrition-model"); 
 const bcrypt = require("bcrypt")
 const register = async (req, res) => {
     try {
@@ -48,7 +49,7 @@ const login = async (req,res)=>{
 const home = async (req, res) => {
     try {
       const { email, password, weight } = req.body;
-  
+      const userExist = await User.findOne({weight});
       
       if (!weight) {
         return res.status(400).json({ msg: "Weight is required" });
