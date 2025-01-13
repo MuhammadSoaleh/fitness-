@@ -75,7 +75,7 @@ function Contact() {
   <textarea class="form-control" name='message'  onChange={handleInput} value={contact.message} placeholder="Leave a comment here" id="floatingTextarea2" style={{ height: '100px' }}></textarea>
   <label for="floatingTextarea2">Comments</label>
 </div>
-<input type='submit' className='btn  my-3 rounded-pill button-submit mb-5 ' style={ {background:'linear-gradient(to right, #cccccc, #4d4d4d)',width:'100%'}} value='Contact Us'/>
+<input type='submit' className='btn  my-3 rounded-pill button-submit mb-5 ' style={ { background:'linear-gradient(to right, #cccccc, #4d4d4d)',width:'100%'}} value='Contact Us'/>
 </form>
 <div className='px-5 bg-tertiary container-fluid'> <a href='#' style={{color:"silver",position:'absolute',right:'20px',height:'30%'}}> <FontAwesomeIcon className='bg-body-tertiary' icon={faAngleUp} /> </a></div>
       </div>

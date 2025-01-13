@@ -1,40 +1,39 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { useAuth } from '../user/Auth';
 function Login() {
   const [user, setUser] = useState({
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   });
 
   const navigate = useNavigate();
+  const { storeTokenInLS } = useAuth();
 
   const handleInput = (e) => {
     let name = e.target.name;
     let value = e.target.value;
-    setUser({ ...user, [name]: value });
+    setUser({
+      ...user,
+      [name]: value,
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch('http://localhost:8000/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(user),
-      });
-      const data = await response.json();
-      alert(data.msg);
+    const response = await fetch('http://localhost:8000/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    });
+    const data = await response.json();
 
-      
-      navigate('/');
-    } catch (error) {
-      console.log(error);
-    }
+    alert(data.msg);
+    storeTokenInLS(data.token);
+    navigate('/');
   };
-
   return (
     <div
       style={{
