@@ -18,10 +18,11 @@ phone:{
     type:Number,
     require:true 
 },
-image:{
-    type:String,
-     
+age:{
+    type:Number,
+    require:true 
 },
+
 height:{
     type:Number,
     require:true 
@@ -31,7 +32,7 @@ weight:{
     require:true 
 },
 });
-userSchema.methods.generatrToken= async function(){
+userSchema.methods.generateToken= async function(){
     try {
         return jwt.sign({
             userId:this._id.toString(),
@@ -39,7 +40,7 @@ userSchema.methods.generatrToken= async function(){
             email:this.email,
             password:this.password,
             phone:this.phone,
-            image:this.image.toString(),
+            age:this.age,
             height:this.height,
             weight:this.weight,
         },"aptechnorthkarachi",{

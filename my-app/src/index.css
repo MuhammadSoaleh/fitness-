@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.button-submit{
+  background:'linear-gradient(to right, #cccccc, #4d4d4d)'!important ;
+width: 50%;
+}
+
+.button-submit:hover{
+  background:'linear-gradient(to right,#4d4d4d,#cccccc)'!important ;
+}

@@ -27,7 +27,14 @@
 .App-link {
   color: #61dafb;
 }
+.button-submit{
+  background:'linear-gradient(to right, #cccccc, #4d4d4d)'!important ;
+width: 100%;
+}
 
+.button-submit:hover{
+  background:'linear-gradient(to right,#4d4d4d,#cccccc)'!important ;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
