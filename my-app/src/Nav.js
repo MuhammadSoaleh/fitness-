@@ -23,6 +23,12 @@ function Nav() {
         <li className="nav-item">
           <a class="nav-link" href="/contact">Contact</a>
         </li>
+        <li className="nav-item">
+          <a class="nav-link" href="/nutrition">Nutrition</a>
+        </li>
+        <li className="nav-item">
+          <a class="nav-link" href="/workout">Workout</a>
+        </li>
         <li className="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown link
