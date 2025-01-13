@@ -32,6 +32,7 @@ function App() {
   <Route path="/register" element={<Register/>}/>
   <Route path="/nutrition" element={<Nutrition/>}/>
   <Route path="/workout" element={<Workout/>}/>
+  <Route path="/logout" element={<Logout/>}/>
    
   
    {/* <Route path="/admin" element={<Adminlayout/>}>

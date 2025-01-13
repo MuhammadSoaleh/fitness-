@@ -47,8 +47,24 @@ const login = async (req,res)=>{
 
 const home = async (req, res) => {
     try {
-        res.status(200).send("Welcome to home page");
-    } catch (error) {
+        const {email,password,weight}= req.body;
+        const userExist = await User.findOne({weight});
+        if(userExist < 49){
+return res.status(200).json({msg:"You are underweight"})
+        }
+        elseif(userExist > 49 && userExist < 70)
+        {
+            return res.status(200).json({msg:"you are healthy"})
+        }
+        elseif(userExist > 70 && userExist < 90)
+        {
+            return res.status(200).json({msg:"you are overweight"})
+        }
+        elseif(userExist > 90)
+        {
+        res.status(200).send({msg:"you are unhealthy"});}
+    } 
+    catch (error) {
         console.log(error);
         res.status(500).json({ msg: "Server Error" });
     }
