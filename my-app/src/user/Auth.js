@@ -57,7 +57,8 @@ const Authorizationtoken = `Bearer${token}`
     try {
       const response = await fetch("http://localhost:8000/services",
         {
-          method:'GET'
+          method:'GET',
+          Authorization:Authorizationtoken
         }
       );
       if (response.ok) {
