@@ -5,6 +5,7 @@ function Home() {
   return (
     <div>
      <div class="container text-center">
+      <h1 class="display-4">Welcome to my website</h1>
   <div class="row">
     <div class="col">
       1 of 2

@@ -41,7 +41,7 @@ userSchema.methods.generateToken= async function(){
             height:this.height,
             weight:this.weight,
         },"aptechnorthkarachi",{
-            expiresIn:"30h"
+            expiresIn:"30d"
         })
     } catch (error) {
         console.log(error);
