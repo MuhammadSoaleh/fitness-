@@ -13,6 +13,7 @@ import Home from './pages/Home';
 import { AuthProvider } from './user/Auth';
 import Nutrition from './pages/Nutrition';
 import Workout from './pages/Workout';
+
 function App() {
   return (
    <>
@@ -30,6 +31,7 @@ function App() {
   <Route path="/register" element={<Register/>}/>
   <Route path="/nutrition" element={<Nutrition/>}/>
   <Route path="/workout" element={<Workout/>}/>
+  
    {/* <Route path="/admin" element={<Adminlayout/>}>
   <Route path="users" element={<AdminUsers />} />
   <Route path="contacts" element={<AdminContacts />} />
