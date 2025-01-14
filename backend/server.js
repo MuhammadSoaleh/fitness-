@@ -7,7 +7,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json())
 app.use('/',router);
-app.use('/contact',contactRouter);
+app.use('/',contactRouter);
 
 connectDb().then(()=>{app.listen(8000, () => {
     console.log
