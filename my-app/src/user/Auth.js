@@ -63,9 +63,11 @@ const Authorizationtoken = `Bearer${token}`
       );
       if (response.ok) {
         const data = await response.json();
+
         console.log(data.msg);
         setService(data.msg);
       }
+      
     } catch (error) {
       console.log(error);
     }

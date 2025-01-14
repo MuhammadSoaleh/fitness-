@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../user/Auth';
+
 function Login() {
   const [user, setUser] = useState({
     email: '',
     password: '',
   });
+  const [showPassword, setShowPassword] = useState(false); // State for toggling password visibility
 
   const navigate = useNavigate();
   const { storeTokenInLS } = useAuth();
@@ -17,6 +19,10 @@ function Login() {
       ...user,
       [name]: value,
     });
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   const handleSubmit = async (e) => {
@@ -34,6 +40,7 @@ function Login() {
     storeTokenInLS(data.token);
     navigate('/');
   };
+
   return (
     <div
       style={{
@@ -46,7 +53,6 @@ function Login() {
         overflow: 'hidden',
       }}
     >
-      {/* Background Overlay for better text contrast */}
       <div
         style={{
           position: 'absolute',
@@ -54,7 +60,7 @@ function Login() {
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)', // dark transparent overlay
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
         }}
       />
       
@@ -77,9 +83,9 @@ function Login() {
               />
               <label htmlFor="floatingInput">Email Address</label>
             </div>
-            <div className="form-floating mb-3">
+            <div className="form-floating mb-3 position-relative">
               <input
-                type="password"
+                type={showPassword ? 'text' : 'password'} // Toggle input type
                 value={user.password}
                 onChange={handleInput}
                 name="password"
@@ -89,6 +95,14 @@ function Login() {
                 required
               />
               <label htmlFor="floatingPassword">Password</label>
+              <button
+                type="button"
+                onClick={togglePasswordVisibility}
+                className="btn btn-sm btn-light position-absolute"
+                style={{ top: '50%', right: '10px', transform: 'translateY(-50%)' }}
+              >
+                {showPassword ? 'Hide' : 'Show'}
+              </button>
             </div>
             <button
               type="submit"

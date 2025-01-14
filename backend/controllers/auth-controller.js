@@ -49,20 +49,20 @@ const login = async (req,res)=>{
 const home = async (req, res) => {
     try {
       const { email, password, weight } = req.body;
-      const userExist = await User.findOne({weight});
+      const {userExist} = await User.findOne({weight,email});
       
-      if (!weight) {
+      if (!userExist) {
         return res.status(400).json({ msg: "Weight is required" });
       }
   
       
-      if (weight < 49) {
+      if (userExist < 49) {
         return res.status(200).json({ msg: "You are underweight" });
-      } else if (weight >= 49 && weight <= 70) {
+      } else if (userExist >= 49 && userExist <= 70) {
         return res.status(200).json({ msg: "You are healthy" });
-      } else if (weight > 70 && weight <= 90) {
+      } else if (userExist > 70 && userExist <= 90) {
         return res.status(200).json({ msg: "You are overweight" });
-      } else if (weight > 90) {
+      } else if (userExist > 90) {
         return res.status(200).json({ msg: "You are unhealthy" });
       }
   
