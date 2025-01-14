@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const jwt=require("jsonwebtoken")
 const contactSchema = new mongoose.Schema({
 
 username:{
@@ -22,5 +21,5 @@ message:{
 });
 
 
-const Contact= mongoose.model("contact", contactSchema);
+const Contact= new mongoose.model("contact", contactSchema);
 module.exports=Contact;

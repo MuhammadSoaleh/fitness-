@@ -1,7 +1,11 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone,faEnvelope,faLocationDot} from '@fortawesome/free-solid-svg-icons';
-import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import SendIcon from '@mui/icons-material/Send';
+import Button from '@mui/material/Button';
+import InputAdornment from '@mui/material/InputAdornment';
+import TextField from '@mui/material/TextField';
+import AccountCircle from '@mui/icons-material/AccountCircle';
 import { useAuth } from '../user/Auth';
 
 function Contact() {
@@ -11,7 +15,14 @@ function Contact() {
     subject: "",
     message: "",
   });
-
+  const handleInput = (e) => {
+    const name  = e.target.name;
+    const value  = e.target.value;
+    setContact(() => ({
+      ...contact,
+      [name]: value,
+    }));
+  };
   const { user } = useAuth();
 
   useEffect(() => {
@@ -25,13 +36,7 @@ function Contact() {
     }
   }, [user]);
 
-  const handleInput = (e) => {
-    const { name, value } = e.target;
-    setContact((prevContact) => ({
-      ...prevContact,
-      [name]: value,
-    }));
-  };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -55,73 +60,72 @@ function Contact() {
   };
 
   return (
-    <div style={{backgroundImage:'url(https://www.searchenginejournal.com/wp-content/uploads/2022/08/contact-us-2-62fa2cc2edbaf-sej.png)',height:'38rem',width:'100%',backgroundSize:'cover',backgroundPosition:'center',overflow:"hidden"}}>
-        <h1 className='text-center' style={{color:'white'}} >How Can I Help You?</h1>
-      <div className='container-fluid col-6 my-3' >
-<form onSubmit={handleSubmit}>
-<div className="form-floating mb-3">
-  <input type="text" name='username'  onChange={handleInput} value={contact.username} class="form-control" id="floatingInput" placeHolder="name@example.com"/>
-  <label htmlFor="floatingInput">Username</label>
-</div>
-<div className="form-floating mb-3">
-  <input type="email" name='email' onChange={handleInput} value={contact.email} class="form-control" id="floatingInput" placeHolder="name@example.com"/>
-  <label htmlFor="floatingInput">Email address</label>
-</div>
-<div className="form-floating mb-3">
-  <input type="text" name='subject' onChange={handleInput} value={contact.subject} class="form-control" id="floatingPassword" placeHolder="subject"/>
-  <label htmlFor="floatingPassword">subject</label>
-</div>
-<div class="form-floating">
-  <textarea class="form-control" name='message'  onChange={handleInput} value={contact.message} placeholder="Leave a comment here" id="floatingTextarea2" style={{ height: '100px' }}></textarea>
-  <label for="floatingTextarea2">Comments</label>
-</div>
-<input type='submit' className='btn  my-3 rounded-pill button-submit mb-5 ' style={ { background:'linear-gradient(to right, #cccccc, #4d4d4d)',width:'100%'}} value='Contact Us'/>
-</form>
-<div className='px-5 bg-tertiary container-fluid'> <a href='#' style={{color:"silver",position:'absolute',right:'20px',height:'30%'}}> <FontAwesomeIcon className='bg-body-tertiary' icon={faAngleUp} /> </a></div>
+    <div
+      style={{
+        backgroundImage: "url('https://www.mirroroutlet.co.uk/media/wysiwyg/Gym-_all_-web-banner.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '44rem',
+        width: '100%',
+        overflow: 'hidden',
+      }}
+    >
+      <h1 className="text-center" style={{ color: 'black' }}>
+        How Can I Help You?
+      </h1>
+      <div className="container col-6 my-3">
+        <form onSubmit={handleSubmit}>
+          <TextField
+            className="mx-3"
+            name="username"
+            onChange={handleInput}
+            value={contact.username}
+            label="Username"
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <AccountCircle />
+                </InputAdornment>
+              ),
+            }}
+            variant="standard"
+          />
+          <TextField
+            className="mx-3"
+            name="email"
+            onChange={handleInput}
+            value={contact.email}
+            label="Email"
+            variant="filled"
+            size="small"
+          />
+          <TextField
+            className="mx-3"
+            name="subject"
+            onChange={handleInput}
+            value={contact.subject}
+            label="Subject"
+            variant="filled"
+            size="small"
+          />
+          <TextField
+            className="my-3"
+            name="message"
+            onChange={handleInput}
+            value={contact.message}
+            fullWidth
+            label="Message"
+            multiline
+            rows={4}
+            variant="outlined"
+          />
+          <Button variant="contained" className='w-100' type="submit" endIcon={<SendIcon />}>
+            Contact Us
+          </Button>
+        </form>
       </div>
-      <div className='container-fluid bg-dark' >
-      <div class="container text-center">
-  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 ">
-    <div class="col">
-      <div class="p-3"style={{ color: '#8c8c8c' }}> <span style={{ color: 'silver' }}> <FontAwesomeIcon icon={faEnvelope} /></span> : <a href='mailto:admin@gmail.com' style={{color:'#8c8c8c'}}>admin@gmail.com</a></div>
     </div>
-    <div class="col">
-      <div class="p-3" style={{color:' #8c8c8c'}}><span style={{color:'silver'}}>  <FontAwesomeIcon icon={faPhone} />  </span> : <a href='phoneto:1111-222-333' style={{color:'#8c8c8c'}}>1111-222-333 </a></div>
-    </div>
-    <div class="col ">
-    <div class="p-3" style={{color:' #8c8c8c'}}><span style={{color:'silver'}}>  <FontAwesomeIcon icon={faLocationDot} />  </span> : <a href='A 563, Main Shahrah-e-Usman, Sector 11-A Sector 11 A North Karachi Twp, Karachi, Karachi City, Sindh 75850, Pakistan' style={{color:'#8c8c8c'}}>Aptech N.k </a></div>
-    </div>
-    <div class="col">
-      <div class="p-3">Row column</div>
-    </div>
-    <div class="col">
-      <div class="p-3">Row column</div>
-    </div>
-    <div class="col">
-      <div class="p-3">Row column</div>
-    </div>
-    <div class="col">
-      <div class="p-3">Row column</div>
-    </div>
-    <div class="col">
-      <div class="p-3">Row column</div>
-    </div>
-    <div class="col">
-      <div class="p-3">Row column</div>
-    </div>
-    <div class="col">
-      <div class="p-3">Row column</div>
-    </div>
-  </div>
-</div>
-     
-  
-
-
-      
-      </div>
-    </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
